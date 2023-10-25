@@ -12,4 +12,5 @@ function website_features() {
 
 add_action('after_setup_theme','website_features');
 
+
 ?>

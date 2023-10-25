@@ -10,3 +10,10 @@
 <a href="<?php echo site_url(); ?>">
     <p><?php echo site_url(); ?></p>
 </a>
+<span>Below are auto generated links to all other pages</span>
+<?php
+wp_list_pages(array(
+    'title_li'=>NULL
+));
+
+?>
