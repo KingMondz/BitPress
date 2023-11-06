@@ -12,6 +12,27 @@ while (have_posts()){
     <hr>
     <?php
 }
+
+// Get the post content
+$sevicesPost = array(
+    'numberposts' => -1
+);
+$post = get_post($sevicesPost);
+$content = $post->post_content;
+
+// Parse the content into blocks
+$blocks = parse_blocks($content);
+
+
+// Loop through the blocks and render paragraph blocks
+for ($blockquan = 0; $blockQuan <= (count($blocks) - 1); $blockQuan++) {
+    // Render the first block
+$html_output = render_block($blocks[$blockQuan]);
+
+// Display the HTML output
+echo $html_output;
+}
+
 ?>
 <h2>Some of our services include</h2>
 <?php
@@ -28,6 +49,10 @@ while($ourServices->have_posts()){
 
 <?php
 }
+
+
+
+
 wp_reset_postdata();
 ?>
 </body>

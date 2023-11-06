@@ -7,6 +7,7 @@ while (have_posts()){
     <?php the_content(); ?>
     <hr>
     <?php
+    echo "gfvbdjk";
 }
 ?>
 </body>
